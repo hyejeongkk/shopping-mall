@@ -1,7 +1,13 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
-@NgModule({
-  exports: [ RouterModule ]
-})
-export class AppRoutingModule { }
+export const AppRoutes: Routes = [
+	{
+		path: '',
+		children: [
+			{
+				path: '',
+				loadChildren: './index/index.module#IndexModule'
+			}
+		]
+	}
+];

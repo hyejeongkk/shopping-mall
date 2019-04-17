@@ -1,22 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment'; 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './index/navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { IndexModule } from './index/index.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 import { IndexComponent } from './index/index.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutes } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     IndexComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AppRoutingModule
+    SharedModule,
+    IndexModule,
+    CoreModule,
+    RouterModule.forRoot(AppRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
