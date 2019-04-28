@@ -1,4 +1,5 @@
 import { LoginComponent } from "./login/login.component";
+import { SignUpComponent } from "./sign-up/sign-up.component";
 import { Routes } from "@angular/router";
 import { IndexComponent } from "./index.component";
 
@@ -13,6 +14,10 @@ export const IndexRoutes: Routes = [
       {
         path: "login",
         component: LoginComponent
+      },
+      {
+        path: "signUp",
+        component: SignUpComponent
       }
     ]
   }

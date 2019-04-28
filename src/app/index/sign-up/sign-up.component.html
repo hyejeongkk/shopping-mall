@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<div class="container">
+  <div class="card bg-light">
+    
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title mt-3 text-center">회원가입</h4>
+      <br>
+
+
+      <button class="btn btn-block btn-danger"  type="button" (click)="addGoogleUser()"><i class="fab fa-google"></i>   Sign up Google</button>
+      <p class="divider-text">
+        <span class="bg-light">OR</span>
+      </p>
+      <form #userForm="ngForm" (ngSubmit)="addUser(userForm)">
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          </div>
+            <input name="emailId" class="form-control" placeholder="이메일 주소" type="email" [(ngModel)]="createUser.emailId">
+        </div> <!-- form-group// -->
+      
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input name="password" class="form-control" placeholder="비밀번호" type="password" [(ngModel)]="createUser.password">
+        </div> <!-- form-group// -->                                
+        
+        <!-- <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+          </div>
+          <input name="" class="form-control" placeholder="이름" type="text">
+        </div> -->
+        <!-- form-group// -->
+        
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block" type="submit">Sign up</button>
+        </div> <!-- form-group// -->                                                         
+      </form>
+    </article>
+
+  </div> <!-- card.// -->
+</div> 
+<!--container end.//-->
+
+<br>
+<br>

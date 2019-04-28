@@ -7,9 +7,10 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { IndexRoutes } from './index-routing';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
-  declarations: [LoginComponent, NavbarComponent, FooterComponent],
+  declarations: [LoginComponent, NavbarComponent, FooterComponent, SignUpComponent],
   imports: [
     CommonModule, CoreModule, SharedModule, RouterModule.forChild(IndexRoutes)
   ],
